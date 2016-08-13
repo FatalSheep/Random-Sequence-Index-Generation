@@ -1,5 +1,5 @@
 # Random-Sequence-Index-Generation.
-Generates a random sequence of indices from `0` to `N`--without repeats--in O(n) time via Fisher Yate's In-Side-Out shuffling algorithm. The function `rand_indices(n)` is the full implementation.
+Generates a random sequence of indices from `0` to `N`--without repeats--in O(n) time via [Fisher Yates' In-Side-Out](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_.22inside-out.22_algorithm) shuffling algorithm. The function `rand_indices(n)` is the full implementation.
 
 ```C
 #include <stdlib.h>
