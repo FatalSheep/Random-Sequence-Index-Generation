@@ -6,6 +6,7 @@ Generates a random sequence of indices from `0` to `N`--without repeats--in O(n)
 #include <stdio.h>
 #include <string.h>
 
+//////////////////////////////////////////////////////////////////////////
 int* rand_indicies(int n) {
     int* ptr = (int*) malloc(n * sizeof(int));
 
@@ -19,6 +20,7 @@ int* rand_indicies(int n) {
 
     return ptr;
 }
+//////////////////////////////////////////////////////////////////////////
 
 int main() {
     int n = 24;
