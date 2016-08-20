@@ -9,8 +9,8 @@ Generates a random sequence of indices from `0` to `N`--without repeats--in O(n)
 int* rand_indicies(int n) {
     int* ptr = (int*) malloc(n * sizeof(int));
 
-    for (int i = 0; i < n; i++) {
-        int j = (i == 0) ? 0 : rand() % (i + 1);
+    for (int i = 0, j; i < n; i++) {
+        j = (i == 0) ? 0 : rand() % (i + 1);
 
         if (j != i)
             ptr[i] = ptr[j];
