@@ -1,6 +1,8 @@
 # Random-Sequence-Index-Generation.
 Generates a random sequence of indices from `0` to `N`--without repeats--in O(n) time via [Fisher Yates' In-Side-Out](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_.22inside-out.22_algorithm) shuffling algorithm. The function `rand_indices(n)` is the full implementation.
 
+***NOTE:*** I'm using thiss for packet obfuscation for use with cryptography, if you plan to do the same thing make sure to use a cryptographically safe PRNG and seed the PRNG with entropy.
+
 ```C
 #include <stdlib.h>
 #include <stdio.h>
