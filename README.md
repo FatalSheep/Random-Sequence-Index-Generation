@@ -8,25 +8,19 @@ Generates a random sequence of indices from `0` to `N`--without repeats--in O(n)
 #include <stdio.h>
 #include <string.h>
 
-//////////////////////////////////////////////////////////////////////////
-int* rand_indicies(int n) {
-    int* ptr = (int*) malloc(n * sizeof(int));
+// Include the rand_indices header.
+#include ".\rand_indices"
 
-    for (int i = 0, j; i < n; i++) {
-        j = (i == 0) ? 0 : rand() % (i + 1);
-
-        if (j != i)
-            ptr[i] = ptr[j];
-        ptr[j] = i;
-    }
-
-    return ptr;
+// Create a function to pass to rand_indices().
+__int8 random() {
+    return static_cast<__int8>(std::rand());
 }
-//////////////////////////////////////////////////////////////////////////
 
 int main() {
     int n = 24;
-    int* arr = rand_indicies(n);
+    
+    // Call rand_indices() using our random function.
+    int* arr = rand_indicies(&random);
 
     for(int i = 0; i < n; i++)
         printf("%i%c", arr[i], '\n');
